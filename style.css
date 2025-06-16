@@ -1,120 +1,50 @@
-:root {
-  --accent: #2B6CB0;
-  --background: #fff;
-  --text: #222;
-  --light: #f7f7f7;
-  --font: 'Segoe UI', Arial, sans-serif;
-}
-
-html, body {
+.main-nav {
+  list-style: none;
   margin: 0;
   padding: 0;
-  background: var(--background);
-  color: var(--text);
-  font-family: var(--font);
-}
-
-.container {
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 2em;
-}
-
-header {
-  background: var(--light);
-  border-bottom: 1px solid #ececec;
-  padding-top: 2em;
-  padding-bottom: 2em;
-  text-align: center;
-}
-
-h1 {
-  margin: 0 0 0.2em 0;
-  font-size: 2.5em;
-  letter-spacing: -1px;
-}
-
-.tagline {
-  margin-bottom: 1.5em;
-  color: var(--accent);
-  font-weight: 500;
-  font-size: 1.2em;
-}
-
-nav a {
-  margin: 0 1em;
-  color: var(--accent);
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.2s;
-}
-nav a:hover {
-  color: #19446b;
-}
-
-section {
-  margin-bottom: 3em;
-}
-
-h2 {
-  font-size: 1.7em;
-  margin-bottom: 0.5em;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-li {
-  margin-bottom: 0.7em;
-}
-
-form {
   display: flex;
-  flex-direction: column;
-  gap: 1em;
-  margin-top: 1em;
-}
-input, textarea, button {
-  font: inherit;
-  padding: 0.7em;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-input:focus, textarea:focus {
-  border-color: var(--accent);
-  outline: none;
-}
-button {
-  background: var(--accent);
-  color: #fff;
-  border: none;
-  cursor: not-allowed; /* Change to pointer when enabled */
-  font-weight: bold;
-  transition: background 0.2s;
-}
-button:enabled:hover {
-  background: #19446b;
+  gap: 2em;
 }
 
-footer {
-  background: var(--light);
-  border-top: 1px solid #ececec;
-  text-align: center;
-  padding: 1em 0;
-  font-size: 0.9em;
-  color: #888;
+.main-nav > li {
+  position: relative;
 }
 
-/* Responsive design */
-@media (max-width: 600px) {
-  .container {
-    padding: 1em;
-  }
-  h1 {
-    font-size: 1.5em;
-  }
-  h2 {
-    font-size: 1.2em;
-  }
+.main-nav a {
+  text-decoration: none;
+  color: #222;
+  padding: 0.5em 0.8em;
+  display: block;
+}
+
+
+
+.has-submenu .submenu {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  min-width: 180px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.10);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  z-index: 1000;
+}
+
+.has-submenu:hover .submenu,
+.has-submenu:focus-within .submenu {
+  display: block;
+}
+
+.submenu li a {
+  padding: 0.5em 1em;
+  color: #444;
+  white-space: nowrap;
+}
+
+.submenu li a:hover {
+  background: #f0f0f0;
+  color: #111;
 }
