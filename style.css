@@ -17,8 +17,6 @@
   display: block;
 }
 
-
-
 .has-submenu .submenu {
   display: none;
   position: absolute;
@@ -47,4 +45,12 @@
 .submenu li a:hover {
   background: #f0f0f0;
   color: #111;
+}
+
+nav {
+  position: relative;
+  z-index: 100;
+}
+.has-submenu {
+  cursor: pointer;
 }
